@@ -2,7 +2,6 @@
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 #include <cassert>
-
 template<typename T>
 class TPQueue {
  private:
@@ -22,7 +21,6 @@ class TPQueue {
         res -= size + 1;
     return res;
   }
-
  public:
   TPQueue() :
     size(100),
@@ -43,7 +41,6 @@ class TPQueue {
         arr[count - i] = arr[count - (i + 1)];
         arr[count - (i + 1)] = dub;
       }
-      
   } else {
     arr[end++] = item;
     count++;
@@ -65,7 +62,7 @@ class TPQueue {
   bool isEmpty() const {
     return count == 0;
   }
-  bool isFull() const  {
+  bool isFull() const {
     return count == size;
   }
 };
@@ -73,5 +70,4 @@ struct SYM {
   char ch;
   int  prior;
 };
-
 #endif // INCLUDE_TPQUEUE_H_
